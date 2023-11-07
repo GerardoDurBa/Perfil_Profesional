@@ -146,7 +146,7 @@ const validation    = document.getElementById("validation");
 form_register.addEventListener("submit", event_name =>{
     event_name.preventDefault();
     let info = "";
-    if(nombres.value.length <= 2 || apellidos.value.length <= 2){
+    if(nombres <= 2 || apellidos <= 2){
         info += "Nombres y/o apellidos deben ser mayores a 2 letras"
         validation.style.color = "red";
     }
@@ -156,3 +156,30 @@ form_register.addEventListener("submit", event_name =>{
         apellidos.style.backgroundColor = "green";
     }
 })
+
+function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
+    console.log(date);
+
+    for (let a=0;a<=array_mul.length;a++){
+        console.log(array_mul[a].name);
+    }
+}
+
+function validate(){
+    // alert("FUNCIONA");
+    var nombres = document.getElementById("nombres").value;
+    console.log(nombres.length);
+    if (nombres.length > 2){
+        document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus();
+        alert(nombres.split(""));
+    }
+
+}
+
+function limpiar(){
+    let nombres = document.getElementById("nombres").value; 
+}

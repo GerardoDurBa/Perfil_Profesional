@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo JS</title>
 </head>
-<body onload="load_page">
+<body onload="load_page()">
 
     <label for="" id="text_one"></label>
     <label for="" id="text_two"></label>
@@ -16,7 +16,7 @@
     <br><br>
     <form id ="form_register" autocomplete="off">
         <label for="nombres">Nombres</label>
-        <input type="text" name="" id="nombres" size ="30" placeholder="Escriba sus nombres aqui:"> 
+        <input type="text" name="" id="nombres" size ="30" placeholder="Escriba sus nombres aqui:" onblur="validate()"> 
         <br>
         <label for="apellidos">Apellidos</label>
         <input type="text" name="" id="apellidos" size ="30" placeholder="Escriba sus apellidos aqui:"> 
